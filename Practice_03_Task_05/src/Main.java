@@ -6,8 +6,14 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите год: ");
         int year = scanner.nextInt();
+        
+        if (year % 4 != 0 && !(year % 100 == 0) || year % 400 == 0) {
+        		System.out.printf("%d является високосным годом.\n", year);
+        } else {
+        		System.out.printf("%d НЕ является високосным годом.\n", year);
+        }
 
-        if (year % 4 != 0) {
+        /* if (year % 4 != 0) {
             System.out.printf("%d НЕ является високосным годом.\n", year);
         } else if (year % 100 != 0) {
             System.out.printf("%d является високосным годом.\n", year);
@@ -16,6 +22,7 @@ public class Main{
         } else {
             System.out.printf("%d является високосным годом.\n", year);
         }
+        */
    
     }
 
